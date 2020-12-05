@@ -2,11 +2,12 @@ import pyspark
 from pyspark.sql import SparkSession
 
 from nltk.corpus import stopwords
+import pickle
 import re
 
 stopwords_en = stopwords.words('english')
 
-N = 1000 # top N words
+N = 2000 # top N words
 
 def wordcount(row):
   text = row.__getitem__('text')
@@ -25,4 +26,8 @@ if __name__ == '__main__':
   result = x.rdd.flatMap(wordcount).reduceByKey(lambda l, r: l+r).takeOrdered(N, key=lambda r: -r[1])
   for r in result:
     print((r[1], r[0]))
-  
+
+  words = map(lambda r: r[0], result)
+  wordindex = { w: i for w, i in enumerate(words) }
+  with open('wordindex.pickle', 'w') as f:
+    pickle.dump(wordindex, f)
