@@ -6,50 +6,32 @@ import pandas as pd
 import pickle
 import re
 
-from nltk.corpus import stopwords
+from functools import partial
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 
-# process text data
+# process unigram data
 
-stopwords_en = stopwords.words('english')
-
-def get_word_frequency(text):
-  words = map(lambda t: re.sub('^([^A-Za-z0-9])+|([^A-Za-z0-9])+$', '', t.lower()), text.split(' '))
-  freq = {}
-  for w in words:
-    if len(w) > 1 and w not in stopwords_en:
-      freq[w] = freq.get(w, 0) + 1
-  return freq
-
-def add_freq(a, b):
-  freq = {}
-  for k, v in a.items():
-    freq[k] = v
-  for k, v in b.items():
-    freq[k] = freq.get(k, 0) + v
-  return freq
-
-def process_row(row):
+def process_row(features, row):
+  word = row.__getitem__('word1')
+  freq = int(row.__getitem__('n'))
   date = row.__getitem__('date')
-  text = row.__getitem__('text')
-  return (date.split(' ')[0].replace('-', ''), get_word_frequency(text))
+  if word not in features:
+    return
+  yield (date.split('T')[0].replace('-', ''), np.array([freq if w == word else 0 for w in features]))
 
-def remove_low_freq_words(row):
-  freq = row[1]
-  return (row[0], {k:v for k, v in freq.items() if v >= 5})
-
-def build_word_frequency_by_date(tweets):
-  return tweets.rdd.map(process_row).reduceByKey(add_freq).map(remove_low_freq_words).sortByKey()
-
+def build_word_frequency_by_date(tweets, features):
+  t = tweets.rdd.flatMap(partial(process_row, features)).reduceByKey(lambda l, r: l+r)
+  t = t.filter(lambda r: r[0] >= '20200301') # filter to when cases started rising
+  return t
 
 # Linear regression model
 
-K = 4 # number of partitions in ensemble. should be large enough to scale
+K = 4 # set number of partitions to use when building model
 
-def to_freq_vector(words, topwords):
+def to_freq_vector(words, features):
   # limit to a smaller number of words to prevent overfitting
-  return [words.get(w, 0) for w in topwords[1:50]]
+  return [words.get(w, 0) for w in features]
 
 def build_model(stream):
   # stream: a generator of (date, (bag of words, label))
@@ -60,6 +42,7 @@ def build_model(stream):
   if len(x) == 0:
     return
 
+  print('Partition dataset size %d' % len(y))
   # we can change which model to use here
   reg = LinearRegression().fit(x, y)
   yield reg
@@ -68,10 +51,10 @@ if __name__ == '__main__':
   spark = SparkSession.builder.getOrCreate()
   spark.conf.set('spark.sql.execution.arrow.enabled', 'true')
 
-  tweets = spark.read.option('multiline', True).option('escape', '"').csv('covid19_tweets.csv', header=True)
-  tweets = tweets.sample(False, 0.2) # sample 20% of total rows to save time for now
+  tweets = spark.read.option('multiline', True).option('escape', '"').csv('covid19tweets/*csv', header=True)
 
-  x = build_word_frequency_by_date(tweets.select(['date', 'text']).dropna())
+  features = pickle.load(open('selected.pickle', 'r'))
+  x = build_word_frequency_by_date(tweets, features)
 
   # case numbers can easily fit into one pandas dataframe
   cases_pd = pd.read_csv('us_covid19_daily.csv')
@@ -81,24 +64,28 @@ if __name__ == '__main__':
 
   # join and format to (date, (words, positive, nextday))
   df = x.join(y).map(lambda r: (r[0], (r[1][0], r[1][1][0], r[1][1][1])))
-  result = df.collect()
+  # result = df.collect()
   # for row in result:
   #   print(row)
 
   # process into word frequency vectors and append current no. of cases to feature vector
-  f = open('topwords.pickle', 'r')
-  topwords = pickle.load(f)
-  df = df.map(lambda r: (r[0], (to_freq_vector(r[1][0], topwords) + [r[1][1]], r[1][2])))
+  df = df.map(lambda r: (r[0], (np.append(r[1][0], r[1][1]), r[1][2])))
+
+  dates = df.map(lambda r: r[0]).sortBy(lambda r: r).collect()
 
   # train test split by date then remove date from labels (not needed for our purposes)
-  SPLIT = '20200817' # gets us an approximate 4:1 train:test split
-  train_df = df.filter(lambda r: r[0] < SPLIT).map(lambda r: r[1])
-  test_df = df.filter(lambda r: r[0] >= SPLIT).map(lambda r: r[1])
+  split = dates[int(len(dates) * 0.8)] # gets us an approximate 4:1 train:test split
+  train_df = df.filter(lambda r: r[0] < split).map(lambda r: r[1])
+  test_df = df.filter(lambda r: r[0] >= split).map(lambda r: r[1])
   xtest = np.array(test_df.map(lambda r: r[0]).collect())
   ytest = np.array(test_df.map(lambda r: r[1]).collect())
 
   train_size = train_df.count()
   test_size = test_df.count()
+
+  # collect for analysis
+  ytrain = train_df.map(lambda r: r[1]).collect()
+  y_all = np.array([y for y in ytest] + ytrain)
 
   # fit models
   models = train_df.repartition(K).mapPartitions(build_model).collect()
@@ -108,10 +95,18 @@ if __name__ == '__main__':
   bagging = np.array([model.predict(xtest) for model in models])
   ypred = np.mean(bagging, axis=0)
   print('Bootstrap aggregation (bagging) results')
+  print('Test X:')
+  print(xtest)
   print('Predicted:')
   print(ypred)
   print('Actual:')
   print(ytest)
+  print('Diff:')
+  print(ypred - ytest)
   print('Ratio:')
   print(ypred / ytest)
-  print('Bagging RMSE: %f' % np.sqrt(mean_squared_error(ypred, ytest)))
+  print('Linear regression ensemble RMSE: %f' % np.sqrt(mean_squared_error(ypred, ytest)))
+
+  # validation of general case
+  print('Average case numbers: %f', np.mean(y_all))
+  print('SD case numbers: %f', np.std(y_all))

@@ -1,178 +1,179 @@
-2020-12-05 19:47:16 WARN  NativeCodeLoader:62 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-2020-12-05 19:47:17 INFO  SparkContext:54 - Running Spark version 2.3.1
-2020-12-05 19:47:17 INFO  SparkContext:54 - Submitted application: wordcount.py
-2020-12-05 19:47:17 INFO  SecurityManager:54 - Changing view acls to: z648li
-2020-12-05 19:47:17 INFO  SecurityManager:54 - Changing modify acls to: z648li
-2020-12-05 19:47:17 INFO  SecurityManager:54 - Changing view acls groups to: 
-2020-12-05 19:47:17 INFO  SecurityManager:54 - Changing modify acls groups to: 
-2020-12-05 19:47:17 INFO  SecurityManager:54 - SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(z648li); groups with view permissions: Set(); users  with modify permissions: Set(z648li); groups with modify permissions: Set()
-2020-12-05 19:47:17 INFO  Utils:54 - Successfully started service 'sparkDriver' on port 44719.
-2020-12-05 19:47:17 INFO  SparkEnv:54 - Registering MapOutputTracker
-2020-12-05 19:47:17 INFO  SparkEnv:54 - Registering BlockManagerMaster
-2020-12-05 19:47:17 INFO  BlockManagerMasterEndpoint:54 - Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
-2020-12-05 19:47:17 INFO  BlockManagerMasterEndpoint:54 - BlockManagerMasterEndpoint up
-2020-12-05 19:47:17 INFO  DiskBlockManager:54 - Created local directory at /tmp/blockmgr-54f351d0-16ce-4090-a9b7-52d4f7f01454
-2020-12-05 19:47:17 INFO  MemoryStore:54 - MemoryStore started with capacity 366.3 MB
-2020-12-05 19:47:17 INFO  SparkEnv:54 - Registering OutputCommitCoordinator
-2020-12-05 19:47:17 INFO  log:192 - Logging initialized @2431ms
-2020-12-05 19:47:17 INFO  Server:346 - jetty-9.3.z-SNAPSHOT
-2020-12-05 19:47:17 INFO  Server:414 - Started @2482ms
-2020-12-05 19:47:17 INFO  AbstractConnector:278 - Started ServerConnector@71107b8d{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
-2020-12-05 19:47:17 INFO  Utils:54 - Successfully started service 'SparkUI' on port 4040.
-2020-12-05 19:47:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@645f15b7{/jobs,null,AVAILABLE,@Spark}
-2020-12-05 19:47:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@7a816065{/jobs/json,null,AVAILABLE,@Spark}
-2020-12-05 19:47:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@5ed7fdbc{/jobs/job,null,AVAILABLE,@Spark}
-2020-12-05 19:47:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@2547af08{/jobs/job/json,null,AVAILABLE,@Spark}
-2020-12-05 19:47:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@5434718d{/stages,null,AVAILABLE,@Spark}
-2020-12-05 19:47:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@356f5caa{/stages/json,null,AVAILABLE,@Spark}
-2020-12-05 19:47:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@7716c950{/stages/stage,null,AVAILABLE,@Spark}
-2020-12-05 19:47:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@573b3e8e{/stages/stage/json,null,AVAILABLE,@Spark}
-2020-12-05 19:47:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@16263170{/stages/pool,null,AVAILABLE,@Spark}
-2020-12-05 19:47:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@714a074e{/stages/pool/json,null,AVAILABLE,@Spark}
-2020-12-05 19:47:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@1c80bd43{/storage,null,AVAILABLE,@Spark}
-2020-12-05 19:47:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@12413f13{/storage/json,null,AVAILABLE,@Spark}
-2020-12-05 19:47:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@354b219a{/storage/rdd,null,AVAILABLE,@Spark}
-2020-12-05 19:47:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@141a300a{/storage/rdd/json,null,AVAILABLE,@Spark}
-2020-12-05 19:47:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@d69ed6f{/environment,null,AVAILABLE,@Spark}
-2020-12-05 19:47:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@16cbe276{/environment/json,null,AVAILABLE,@Spark}
-2020-12-05 19:47:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@7a6046c4{/executors,null,AVAILABLE,@Spark}
-2020-12-05 19:47:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@3fbfb3e2{/executors/json,null,AVAILABLE,@Spark}
-2020-12-05 19:47:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@7d7f23ef{/executors/threadDump,null,AVAILABLE,@Spark}
-2020-12-05 19:47:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@346eb664{/executors/threadDump/json,null,AVAILABLE,@Spark}
-2020-12-05 19:47:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@4c40804b{/static,null,AVAILABLE,@Spark}
-2020-12-05 19:47:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@5c34fc7d{/,null,AVAILABLE,@Spark}
-2020-12-05 19:47:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@2d553903{/api,null,AVAILABLE,@Spark}
-2020-12-05 19:47:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@17f48a64{/jobs/job/kill,null,AVAILABLE,@Spark}
-2020-12-05 19:47:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@7a4b7619{/stages/stage/kill,null,AVAILABLE,@Spark}
-2020-12-05 19:47:17 INFO  SparkUI:54 - Bound SparkUI to 0.0.0.0, and started at http://ubuntu1804-002.student.cs.uwaterloo.ca:4040
-2020-12-05 19:47:17 INFO  SparkContext:54 - Added file file:/u1/z648li/cs451/nlp-covid19/wordcount.py at file:/u1/z648li/cs451/nlp-covid19/wordcount.py with timestamp 1607215637839
-2020-12-05 19:47:17 INFO  Utils:54 - Copying /u1/z648li/cs451/nlp-covid19/wordcount.py to /tmp/spark-ae7d8c56-bf7a-40cc-a84a-eea30ee8fc17/userFiles-18381442-2335-4cf8-8860-52392577db78/wordcount.py
-2020-12-05 19:47:17 INFO  Executor:54 - Starting executor ID driver on host localhost
-2020-12-05 19:47:17 INFO  Utils:54 - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 33137.
-2020-12-05 19:47:17 INFO  NettyBlockTransferService:54 - Server created on ubuntu1804-002.student.cs.uwaterloo.ca:33137
-2020-12-05 19:47:17 INFO  BlockManager:54 - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
-2020-12-05 19:47:17 INFO  BlockManagerMaster:54 - Registering BlockManager BlockManagerId(driver, ubuntu1804-002.student.cs.uwaterloo.ca, 33137, None)
-2020-12-05 19:47:17 INFO  BlockManagerMasterEndpoint:54 - Registering block manager ubuntu1804-002.student.cs.uwaterloo.ca:33137 with 366.3 MB RAM, BlockManagerId(driver, ubuntu1804-002.student.cs.uwaterloo.ca, 33137, None)
-2020-12-05 19:47:17 INFO  BlockManagerMaster:54 - Registered BlockManager BlockManagerId(driver, ubuntu1804-002.student.cs.uwaterloo.ca, 33137, None)
-2020-12-05 19:47:17 INFO  BlockManager:54 - Initialized BlockManager: BlockManagerId(driver, ubuntu1804-002.student.cs.uwaterloo.ca, 33137, None)
-2020-12-05 19:47:18 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@f9cdbd7{/metrics/json,null,AVAILABLE,@Spark}
-2020-12-05 19:47:18 INFO  SharedState:54 - Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/u1/z648li/cs451/nlp-covid19/spark-warehouse/').
-2020-12-05 19:47:18 INFO  SharedState:54 - Warehouse path is 'file:/u1/z648li/cs451/nlp-covid19/spark-warehouse/'.
-2020-12-05 19:47:18 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@24f108e6{/SQL,null,AVAILABLE,@Spark}
-2020-12-05 19:47:18 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@593dbf39{/SQL/json,null,AVAILABLE,@Spark}
-2020-12-05 19:47:18 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@1935447d{/SQL/execution,null,AVAILABLE,@Spark}
-2020-12-05 19:47:18 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@2257b1e5{/SQL/execution/json,null,AVAILABLE,@Spark}
-2020-12-05 19:47:18 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@224bd4c3{/static/sql,null,AVAILABLE,@Spark}
-2020-12-05 19:47:18 INFO  StateStoreCoordinatorRef:54 - Registered StateStoreCoordinator endpoint
-2020-12-05 19:47:18 INFO  MemoryStore:54 - Block broadcast_0 stored as values in memory (estimated size 282.2 KB, free 366.0 MB)
-2020-12-05 19:47:18 INFO  MemoryStore:54 - Block broadcast_0_piece0 stored as bytes in memory (estimated size 23.5 KB, free 366.0 MB)
-2020-12-05 19:47:18 INFO  BlockManagerInfo:54 - Added broadcast_0_piece0 in memory on ubuntu1804-002.student.cs.uwaterloo.ca:33137 (size: 23.5 KB, free: 366.3 MB)
-2020-12-05 19:47:18 INFO  SparkContext:54 - Created broadcast 0 from csv at NativeMethodAccessorImpl.java:0
-2020-12-05 19:47:19 INFO  FileInputFormat:283 - Total input paths to process : 1
-2020-12-05 19:47:19 INFO  FileInputFormat:283 - Total input paths to process : 1
-2020-12-05 19:47:19 INFO  CombineFileInputFormat:413 - DEBUG: Terminated node allocation with : CompletedNodes: 1, size left: 0
-2020-12-05 19:47:19 INFO  SparkContext:54 - Starting job: csv at NativeMethodAccessorImpl.java:0
-2020-12-05 19:47:19 INFO  DAGScheduler:54 - Got job 0 (csv at NativeMethodAccessorImpl.java:0) with 1 output partitions
-2020-12-05 19:47:19 INFO  DAGScheduler:54 - Final stage: ResultStage 0 (csv at NativeMethodAccessorImpl.java:0)
-2020-12-05 19:47:19 INFO  DAGScheduler:54 - Parents of final stage: List()
-2020-12-05 19:47:19 INFO  DAGScheduler:54 - Missing parents: List()
-2020-12-05 19:47:19 INFO  DAGScheduler:54 - Submitting ResultStage 0 (MapPartitionsRDD[2] at csv at NativeMethodAccessorImpl.java:0), which has no missing parents
-2020-12-05 19:47:19 INFO  MemoryStore:54 - Block broadcast_1 stored as values in memory (estimated size 7.2 KB, free 366.0 MB)
-2020-12-05 19:47:19 INFO  MemoryStore:54 - Block broadcast_1_piece0 stored as bytes in memory (estimated size 4.8 KB, free 366.0 MB)
-2020-12-05 19:47:19 INFO  BlockManagerInfo:54 - Added broadcast_1_piece0 in memory on ubuntu1804-002.student.cs.uwaterloo.ca:33137 (size: 4.8 KB, free: 366.3 MB)
-2020-12-05 19:47:19 INFO  SparkContext:54 - Created broadcast 1 from broadcast at DAGScheduler.scala:1039
-2020-12-05 19:47:19 INFO  DAGScheduler:54 - Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[2] at csv at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
-2020-12-05 19:47:19 INFO  TaskSchedulerImpl:54 - Adding task set 0.0 with 1 tasks
-2020-12-05 19:47:19 INFO  TaskSetManager:54 - Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 7975 bytes)
-2020-12-05 19:47:19 INFO  Executor:54 - Running task 0.0 in stage 0.0 (TID 0)
-2020-12-05 19:47:19 INFO  Executor:54 - Fetching file:/u1/z648li/cs451/nlp-covid19/wordcount.py with timestamp 1607215637839
-2020-12-05 19:47:19 INFO  Utils:54 - /u1/z648li/cs451/nlp-covid19/wordcount.py has been previously copied to /tmp/spark-ae7d8c56-bf7a-40cc-a84a-eea30ee8fc17/userFiles-18381442-2335-4cf8-8860-52392577db78/wordcount.py
-2020-12-05 19:47:19 INFO  BinaryFileRDD:54 - Input split: Paths:/u1/z648li/cs451/nlp-covid19/covid19_tweets.csv:0+68713814
-2020-12-05 19:47:19 INFO  Executor:54 - Finished task 0.0 in stage 0.0 (TID 0). 1014 bytes result sent to driver
-2020-12-05 19:47:19 INFO  TaskSetManager:54 - Finished task 0.0 in stage 0.0 (TID 0) in 206 ms on localhost (executor driver) (1/1)
-2020-12-05 19:47:19 INFO  TaskSchedulerImpl:54 - Removed TaskSet 0.0, whose tasks have all completed, from pool 
-2020-12-05 19:47:19 INFO  DAGScheduler:54 - ResultStage 0 (csv at NativeMethodAccessorImpl.java:0) finished in 0.273 s
-2020-12-05 19:47:19 INFO  DAGScheduler:54 - Job 0 finished: csv at NativeMethodAccessorImpl.java:0, took 0.317076 s
-2020-12-05 19:47:19 INFO  ContextCleaner:54 - Cleaned accumulator 17
-2020-12-05 19:47:19 INFO  ContextCleaner:54 - Cleaned accumulator 25
-2020-12-05 19:47:19 INFO  ContextCleaner:54 - Cleaned accumulator 22
-2020-12-05 19:47:19 INFO  ContextCleaner:54 - Cleaned accumulator 14
-2020-12-05 19:47:19 INFO  BlockManagerInfo:54 - Removed broadcast_1_piece0 on ubuntu1804-002.student.cs.uwaterloo.ca:33137 in memory (size: 4.8 KB, free: 366.3 MB)
-2020-12-05 19:47:19 INFO  ContextCleaner:54 - Cleaned accumulator 7
-2020-12-05 19:47:19 INFO  ContextCleaner:54 - Cleaned accumulator 18
-2020-12-05 19:47:19 INFO  ContextCleaner:54 - Cleaned accumulator 21
-2020-12-05 19:47:19 INFO  ContextCleaner:54 - Cleaned accumulator 23
-2020-12-05 19:47:19 INFO  ContextCleaner:54 - Cleaned accumulator 4
-2020-12-05 19:47:19 INFO  ContextCleaner:54 - Cleaned accumulator 24
-2020-12-05 19:47:19 INFO  ContextCleaner:54 - Cleaned accumulator 19
-2020-12-05 19:47:19 INFO  ContextCleaner:54 - Cleaned accumulator 1
-2020-12-05 19:47:19 INFO  BlockManagerInfo:54 - Removed broadcast_0_piece0 on ubuntu1804-002.student.cs.uwaterloo.ca:33137 in memory (size: 23.5 KB, free: 366.3 MB)
-2020-12-05 19:47:19 INFO  ContextCleaner:54 - Cleaned accumulator 20
-2020-12-05 19:47:19 INFO  ContextCleaner:54 - Cleaned accumulator 8
-2020-12-05 19:47:19 INFO  ContextCleaner:54 - Cleaned accumulator 13
-2020-12-05 19:47:19 INFO  ContextCleaner:54 - Cleaned accumulator 6
-2020-12-05 19:47:19 INFO  ContextCleaner:54 - Cleaned accumulator 5
-2020-12-05 19:47:19 INFO  ContextCleaner:54 - Cleaned accumulator 9
-2020-12-05 19:47:19 INFO  ContextCleaner:54 - Cleaned accumulator 12
-2020-12-05 19:47:19 INFO  ContextCleaner:54 - Cleaned accumulator 15
-2020-12-05 19:47:19 INFO  ContextCleaner:54 - Cleaned accumulator 16
-2020-12-05 19:47:19 INFO  ContextCleaner:54 - Cleaned accumulator 11
-2020-12-05 19:47:19 INFO  ContextCleaner:54 - Cleaned accumulator 10
-2020-12-05 19:47:19 INFO  ContextCleaner:54 - Cleaned accumulator 2
-2020-12-05 19:47:19 INFO  ContextCleaner:54 - Cleaned accumulator 3
-2020-12-05 19:47:20 INFO  FileSourceStrategy:54 - Pruning directories with: 
-2020-12-05 19:47:20 INFO  FileSourceStrategy:54 - Post-Scan Filters: AtLeastNNulls(n, text#9)
-2020-12-05 19:47:20 INFO  FileSourceStrategy:54 - Output Data Schema: struct<text: string>
-2020-12-05 19:47:20 INFO  FileSourceScanExec:54 - Pushed Filters: 
-2020-12-05 19:47:20 INFO  CodeGenerator:54 - Code generated in 142.919905 ms
-2020-12-05 19:47:20 INFO  MemoryStore:54 - Block broadcast_2 stored as values in memory (estimated size 278.1 KB, free 366.0 MB)
-2020-12-05 19:47:20 INFO  MemoryStore:54 - Block broadcast_2_piece0 stored as bytes in memory (estimated size 23.5 KB, free 366.0 MB)
-2020-12-05 19:47:20 INFO  BlockManagerInfo:54 - Added broadcast_2_piece0 in memory on ubuntu1804-002.student.cs.uwaterloo.ca:33137 (size: 23.5 KB, free: 366.3 MB)
-2020-12-05 19:47:20 INFO  SparkContext:54 - Created broadcast 2 from javaToPython at NativeMethodAccessorImpl.java:0
-2020-12-05 19:47:20 INFO  FileSourceScanExec:54 - Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
-2020-12-05 19:47:21 INFO  SparkContext:54 - Starting job: takeOrdered at /u1/z648li/cs451/nlp-covid19/wordcount.py:26
-2020-12-05 19:47:21 INFO  DAGScheduler:54 - Registering RDD 9 (reduceByKey at /u1/z648li/cs451/nlp-covid19/wordcount.py:26)
-2020-12-05 19:47:21 INFO  DAGScheduler:54 - Got job 1 (takeOrdered at /u1/z648li/cs451/nlp-covid19/wordcount.py:26) with 1 output partitions
-2020-12-05 19:47:21 INFO  DAGScheduler:54 - Final stage: ResultStage 2 (takeOrdered at /u1/z648li/cs451/nlp-covid19/wordcount.py:26)
-2020-12-05 19:47:21 INFO  DAGScheduler:54 - Parents of final stage: List(ShuffleMapStage 1)
-2020-12-05 19:47:21 INFO  DAGScheduler:54 - Missing parents: List(ShuffleMapStage 1)
-2020-12-05 19:47:21 INFO  DAGScheduler:54 - Submitting ShuffleMapStage 1 (PairwiseRDD[9] at reduceByKey at /u1/z648li/cs451/nlp-covid19/wordcount.py:26), which has no missing parents
-2020-12-05 19:47:21 INFO  MemoryStore:54 - Block broadcast_3 stored as values in memory (estimated size 22.5 KB, free 366.0 MB)
-2020-12-05 19:47:21 INFO  MemoryStore:54 - Block broadcast_3_piece0 stored as bytes in memory (estimated size 13.8 KB, free 366.0 MB)
-2020-12-05 19:47:21 INFO  BlockManagerInfo:54 - Added broadcast_3_piece0 in memory on ubuntu1804-002.student.cs.uwaterloo.ca:33137 (size: 13.8 KB, free: 366.3 MB)
-2020-12-05 19:47:21 INFO  SparkContext:54 - Created broadcast 3 from broadcast at DAGScheduler.scala:1039
-2020-12-05 19:47:21 INFO  DAGScheduler:54 - Submitting 1 missing tasks from ShuffleMapStage 1 (PairwiseRDD[9] at reduceByKey at /u1/z648li/cs451/nlp-covid19/wordcount.py:26) (first 15 tasks are for partitions Vector(0))
-2020-12-05 19:47:21 INFO  TaskSchedulerImpl:54 - Adding task set 1.0 with 1 tasks
-2020-12-05 19:47:21 INFO  TaskSetManager:54 - Starting task 0.0 in stage 1.0 (TID 1, localhost, executor driver, partition 0, PROCESS_LOCAL, 8308 bytes)
-2020-12-05 19:47:21 INFO  Executor:54 - Running task 0.0 in stage 1.0 (TID 1)
-2020-12-05 19:47:21 INFO  FileScanRDD:54 - Reading File path: file:///u1/z648li/cs451/nlp-covid19/covid19_tweets.csv, range: 0-68713814, partition values: [empty row]
-2020-12-05 19:47:21 INFO  CodeGenerator:54 - Code generated in 12.924891 ms
-2020-12-05 19:47:36 INFO  PythonRunner:54 - Times: total = 15368, boot = 304, init = 75, finish = 14989
-2020-12-05 19:47:36 INFO  Executor:54 - Finished task 0.0 in stage 1.0 (TID 1). 2038 bytes result sent to driver
-2020-12-05 19:47:36 INFO  TaskSetManager:54 - Finished task 0.0 in stage 1.0 (TID 1) in 15444 ms on localhost (executor driver) (1/1)
-2020-12-05 19:47:36 INFO  TaskSchedulerImpl:54 - Removed TaskSet 1.0, whose tasks have all completed, from pool 
-2020-12-05 19:47:36 INFO  DAGScheduler:54 - ShuffleMapStage 1 (reduceByKey at /u1/z648li/cs451/nlp-covid19/wordcount.py:26) finished in 15.478 s
-2020-12-05 19:47:36 INFO  DAGScheduler:54 - looking for newly runnable stages
-2020-12-05 19:47:36 INFO  DAGScheduler:54 - running: Set()
-2020-12-05 19:47:36 INFO  DAGScheduler:54 - waiting: Set(ResultStage 2)
-2020-12-05 19:47:36 INFO  DAGScheduler:54 - failed: Set()
-2020-12-05 19:47:36 INFO  DAGScheduler:54 - Submitting ResultStage 2 (PythonRDD[12] at takeOrdered at /u1/z648li/cs451/nlp-covid19/wordcount.py:26), which has no missing parents
-2020-12-05 19:47:36 INFO  MemoryStore:54 - Block broadcast_4 stored as values in memory (estimated size 7.7 KB, free 366.0 MB)
-2020-12-05 19:47:36 INFO  MemoryStore:54 - Block broadcast_4_piece0 stored as bytes in memory (estimated size 4.8 KB, free 366.0 MB)
-2020-12-05 19:47:36 INFO  BlockManagerInfo:54 - Added broadcast_4_piece0 in memory on ubuntu1804-002.student.cs.uwaterloo.ca:33137 (size: 4.8 KB, free: 366.3 MB)
-2020-12-05 19:47:36 INFO  SparkContext:54 - Created broadcast 4 from broadcast at DAGScheduler.scala:1039
-2020-12-05 19:47:36 INFO  DAGScheduler:54 - Submitting 1 missing tasks from ResultStage 2 (PythonRDD[12] at takeOrdered at /u1/z648li/cs451/nlp-covid19/wordcount.py:26) (first 15 tasks are for partitions Vector(0))
-2020-12-05 19:47:36 INFO  TaskSchedulerImpl:54 - Adding task set 2.0 with 1 tasks
-2020-12-05 19:47:36 INFO  TaskSetManager:54 - Starting task 0.0 in stage 2.0 (TID 2, localhost, executor driver, partition 0, ANY, 7649 bytes)
-2020-12-05 19:47:36 INFO  Executor:54 - Running task 0.0 in stage 2.0 (TID 2)
-2020-12-05 19:47:36 INFO  ShuffleBlockFetcherIterator:54 - Getting 1 non-empty blocks out of 1 blocks
-2020-12-05 19:47:36 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 3 ms
-2020-12-05 19:47:37 INFO  PythonRunner:54 - Times: total = 486, boot = -71, init = 99, finish = 458
-2020-12-05 19:47:37 INFO  Executor:54 - Finished task 0.0 in stage 2.0 (TID 2). 21066 bytes result sent to driver
-2020-12-05 19:47:37 INFO  TaskSetManager:54 - Finished task 0.0 in stage 2.0 (TID 2) in 518 ms on localhost (executor driver) (1/1)
-2020-12-05 19:47:37 INFO  TaskSchedulerImpl:54 - Removed TaskSet 2.0, whose tasks have all completed, from pool 
-2020-12-05 19:47:37 INFO  DAGScheduler:54 - ResultStage 2 (takeOrdered at /u1/z648li/cs451/nlp-covid19/wordcount.py:26) finished in 0.528 s
-2020-12-05 19:47:37 INFO  DAGScheduler:54 - Job 1 finished: takeOrdered at /u1/z648li/cs451/nlp-covid19/wordcount.py:26, took 16.032911 s
+2020-12-06 12:30:16 WARN  NativeCodeLoader:62 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2020-12-06 12:30:17 INFO  SparkContext:54 - Running Spark version 2.3.1
+2020-12-06 12:30:17 INFO  SparkContext:54 - Submitted application: wordcount.py
+2020-12-06 12:30:17 INFO  SecurityManager:54 - Changing view acls to: z648li
+2020-12-06 12:30:17 INFO  SecurityManager:54 - Changing modify acls to: z648li
+2020-12-06 12:30:17 INFO  SecurityManager:54 - Changing view acls groups to: 
+2020-12-06 12:30:17 INFO  SecurityManager:54 - Changing modify acls groups to: 
+2020-12-06 12:30:17 INFO  SecurityManager:54 - SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(z648li); groups with view permissions: Set(); users  with modify permissions: Set(z648li); groups with modify permissions: Set()
+2020-12-06 12:30:17 INFO  Utils:54 - Successfully started service 'sparkDriver' on port 34601.
+2020-12-06 12:30:17 INFO  SparkEnv:54 - Registering MapOutputTracker
+2020-12-06 12:30:17 INFO  SparkEnv:54 - Registering BlockManagerMaster
+2020-12-06 12:30:17 INFO  BlockManagerMasterEndpoint:54 - Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2020-12-06 12:30:17 INFO  BlockManagerMasterEndpoint:54 - BlockManagerMasterEndpoint up
+2020-12-06 12:30:17 INFO  DiskBlockManager:54 - Created local directory at /tmp/blockmgr-f3392cb4-2e43-47b1-abf3-901ef24c731f
+2020-12-06 12:30:17 INFO  MemoryStore:54 - MemoryStore started with capacity 366.3 MB
+2020-12-06 12:30:17 INFO  SparkEnv:54 - Registering OutputCommitCoordinator
+2020-12-06 12:30:17 INFO  log:192 - Logging initialized @2352ms
+2020-12-06 12:30:17 INFO  Server:346 - jetty-9.3.z-SNAPSHOT
+2020-12-06 12:30:17 INFO  Server:414 - Started @2413ms
+2020-12-06 12:30:17 WARN  Utils:66 - Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+2020-12-06 12:30:17 INFO  AbstractConnector:278 - Started ServerConnector@2d141684{HTTP/1.1,[http/1.1]}{0.0.0.0:4041}
+2020-12-06 12:30:17 INFO  Utils:54 - Successfully started service 'SparkUI' on port 4041.
+2020-12-06 12:30:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@5c26ec9{/jobs,null,AVAILABLE,@Spark}
+2020-12-06 12:30:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@3a74c99{/jobs/json,null,AVAILABLE,@Spark}
+2020-12-06 12:30:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@4e287c32{/jobs/job,null,AVAILABLE,@Spark}
+2020-12-06 12:30:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@30daaa2e{/jobs/job/json,null,AVAILABLE,@Spark}
+2020-12-06 12:30:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@920fb28{/stages,null,AVAILABLE,@Spark}
+2020-12-06 12:30:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@464cfd2{/stages/json,null,AVAILABLE,@Spark}
+2020-12-06 12:30:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@2aec72f4{/stages/stage,null,AVAILABLE,@Spark}
+2020-12-06 12:30:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@634d308d{/stages/stage/json,null,AVAILABLE,@Spark}
+2020-12-06 12:30:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@2a7f85c2{/stages/pool,null,AVAILABLE,@Spark}
+2020-12-06 12:30:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@74116e1e{/stages/pool/json,null,AVAILABLE,@Spark}
+2020-12-06 12:30:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@1e6771af{/storage,null,AVAILABLE,@Spark}
+2020-12-06 12:30:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@1424f3b6{/storage/json,null,AVAILABLE,@Spark}
+2020-12-06 12:30:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@42233565{/storage/rdd,null,AVAILABLE,@Spark}
+2020-12-06 12:30:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@3d3dc2a1{/storage/rdd/json,null,AVAILABLE,@Spark}
+2020-12-06 12:30:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@187226a0{/environment,null,AVAILABLE,@Spark}
+2020-12-06 12:30:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@2bf8cf5b{/environment/json,null,AVAILABLE,@Spark}
+2020-12-06 12:30:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@702b4f5c{/executors,null,AVAILABLE,@Spark}
+2020-12-06 12:30:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@23d0b332{/executors/json,null,AVAILABLE,@Spark}
+2020-12-06 12:30:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@2a9ed6ce{/executors/threadDump,null,AVAILABLE,@Spark}
+2020-12-06 12:30:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@477146d1{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2020-12-06 12:30:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@6d8ab0cc{/static,null,AVAILABLE,@Spark}
+2020-12-06 12:30:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@4788310c{/,null,AVAILABLE,@Spark}
+2020-12-06 12:30:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@572f275{/api,null,AVAILABLE,@Spark}
+2020-12-06 12:30:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@7002bd8f{/jobs/job/kill,null,AVAILABLE,@Spark}
+2020-12-06 12:30:17 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@5c95f838{/stages/stage/kill,null,AVAILABLE,@Spark}
+2020-12-06 12:30:17 INFO  SparkUI:54 - Bound SparkUI to 0.0.0.0, and started at http://ubuntu1804-010.student.cs.uwaterloo.ca:4041
+2020-12-06 12:30:18 INFO  SparkContext:54 - Added file file:/u1/z648li/cs451/nlp-covid19/wordcount.py at file:/u1/z648li/cs451/nlp-covid19/wordcount.py with timestamp 1607275818106
+2020-12-06 12:30:18 INFO  Utils:54 - Copying /u1/z648li/cs451/nlp-covid19/wordcount.py to /tmp/spark-aa2b5080-5c1d-44e5-9480-2469c87c3b53/userFiles-bd06160b-7b29-4f1d-acd8-00aa80631c7b/wordcount.py
+2020-12-06 12:30:18 INFO  Executor:54 - Starting executor ID driver on host localhost
+2020-12-06 12:30:18 INFO  Utils:54 - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 39213.
+2020-12-06 12:30:18 INFO  NettyBlockTransferService:54 - Server created on ubuntu1804-010.student.cs.uwaterloo.ca:39213
+2020-12-06 12:30:18 INFO  BlockManager:54 - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2020-12-06 12:30:18 INFO  BlockManagerMaster:54 - Registering BlockManager BlockManagerId(driver, ubuntu1804-010.student.cs.uwaterloo.ca, 39213, None)
+2020-12-06 12:30:18 INFO  BlockManagerMasterEndpoint:54 - Registering block manager ubuntu1804-010.student.cs.uwaterloo.ca:39213 with 366.3 MB RAM, BlockManagerId(driver, ubuntu1804-010.student.cs.uwaterloo.ca, 39213, None)
+2020-12-06 12:30:18 INFO  BlockManagerMaster:54 - Registered BlockManager BlockManagerId(driver, ubuntu1804-010.student.cs.uwaterloo.ca, 39213, None)
+2020-12-06 12:30:18 INFO  BlockManager:54 - Initialized BlockManager: BlockManagerId(driver, ubuntu1804-010.student.cs.uwaterloo.ca, 39213, None)
+2020-12-06 12:30:18 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@a0be447{/metrics/json,null,AVAILABLE,@Spark}
+2020-12-06 12:30:18 INFO  SharedState:54 - Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/u1/z648li/cs451/nlp-covid19/spark-warehouse/').
+2020-12-06 12:30:18 INFO  SharedState:54 - Warehouse path is 'file:/u1/z648li/cs451/nlp-covid19/spark-warehouse/'.
+2020-12-06 12:30:18 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@6fc4f58a{/SQL,null,AVAILABLE,@Spark}
+2020-12-06 12:30:18 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@15e6cf70{/SQL/json,null,AVAILABLE,@Spark}
+2020-12-06 12:30:18 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@589717e3{/SQL/execution,null,AVAILABLE,@Spark}
+2020-12-06 12:30:18 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@24d7d149{/SQL/execution/json,null,AVAILABLE,@Spark}
+2020-12-06 12:30:18 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@181e9a64{/static/sql,null,AVAILABLE,@Spark}
+2020-12-06 12:30:18 INFO  StateStoreCoordinatorRef:54 - Registered StateStoreCoordinator endpoint
+2020-12-06 12:30:19 INFO  MemoryStore:54 - Block broadcast_0 stored as values in memory (estimated size 282.2 KB, free 366.0 MB)
+2020-12-06 12:30:19 INFO  MemoryStore:54 - Block broadcast_0_piece0 stored as bytes in memory (estimated size 23.5 KB, free 366.0 MB)
+2020-12-06 12:30:19 INFO  BlockManagerInfo:54 - Added broadcast_0_piece0 in memory on ubuntu1804-010.student.cs.uwaterloo.ca:39213 (size: 23.5 KB, free: 366.3 MB)
+2020-12-06 12:30:19 INFO  SparkContext:54 - Created broadcast 0 from csv at NativeMethodAccessorImpl.java:0
+2020-12-06 12:30:19 INFO  FileInputFormat:283 - Total input paths to process : 1
+2020-12-06 12:30:19 INFO  FileInputFormat:283 - Total input paths to process : 1
+2020-12-06 12:30:19 INFO  CombineFileInputFormat:413 - DEBUG: Terminated node allocation with : CompletedNodes: 1, size left: 0
+2020-12-06 12:30:19 INFO  SparkContext:54 - Starting job: csv at NativeMethodAccessorImpl.java:0
+2020-12-06 12:30:19 INFO  DAGScheduler:54 - Got job 0 (csv at NativeMethodAccessorImpl.java:0) with 1 output partitions
+2020-12-06 12:30:19 INFO  DAGScheduler:54 - Final stage: ResultStage 0 (csv at NativeMethodAccessorImpl.java:0)
+2020-12-06 12:30:19 INFO  DAGScheduler:54 - Parents of final stage: List()
+2020-12-06 12:30:19 INFO  DAGScheduler:54 - Missing parents: List()
+2020-12-06 12:30:19 INFO  DAGScheduler:54 - Submitting ResultStage 0 (MapPartitionsRDD[2] at csv at NativeMethodAccessorImpl.java:0), which has no missing parents
+2020-12-06 12:30:19 INFO  MemoryStore:54 - Block broadcast_1 stored as values in memory (estimated size 7.2 KB, free 366.0 MB)
+2020-12-06 12:30:19 INFO  MemoryStore:54 - Block broadcast_1_piece0 stored as bytes in memory (estimated size 4.9 KB, free 366.0 MB)
+2020-12-06 12:30:19 INFO  BlockManagerInfo:54 - Added broadcast_1_piece0 in memory on ubuntu1804-010.student.cs.uwaterloo.ca:39213 (size: 4.9 KB, free: 366.3 MB)
+2020-12-06 12:30:19 INFO  SparkContext:54 - Created broadcast 1 from broadcast at DAGScheduler.scala:1039
+2020-12-06 12:30:19 INFO  DAGScheduler:54 - Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[2] at csv at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+2020-12-06 12:30:19 INFO  TaskSchedulerImpl:54 - Adding task set 0.0 with 1 tasks
+2020-12-06 12:30:19 INFO  TaskSetManager:54 - Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 7975 bytes)
+2020-12-06 12:30:19 INFO  Executor:54 - Running task 0.0 in stage 0.0 (TID 0)
+2020-12-06 12:30:19 INFO  Executor:54 - Fetching file:/u1/z648li/cs451/nlp-covid19/wordcount.py with timestamp 1607275818106
+2020-12-06 12:30:19 INFO  Utils:54 - /u1/z648li/cs451/nlp-covid19/wordcount.py has been previously copied to /tmp/spark-aa2b5080-5c1d-44e5-9480-2469c87c3b53/userFiles-bd06160b-7b29-4f1d-acd8-00aa80631c7b/wordcount.py
+2020-12-06 12:30:19 INFO  BinaryFileRDD:54 - Input split: Paths:/u1/z648li/cs451/nlp-covid19/covid19_tweets.csv:0+68713814
+2020-12-06 12:30:19 INFO  Executor:54 - Finished task 0.0 in stage 0.0 (TID 0). 1057 bytes result sent to driver
+2020-12-06 12:30:19 INFO  TaskSetManager:54 - Finished task 0.0 in stage 0.0 (TID 0) in 187 ms on localhost (executor driver) (1/1)
+2020-12-06 12:30:19 INFO  TaskSchedulerImpl:54 - Removed TaskSet 0.0, whose tasks have all completed, from pool 
+2020-12-06 12:30:19 INFO  DAGScheduler:54 - ResultStage 0 (csv at NativeMethodAccessorImpl.java:0) finished in 0.250 s
+2020-12-06 12:30:19 INFO  DAGScheduler:54 - Job 0 finished: csv at NativeMethodAccessorImpl.java:0, took 0.289616 s
+2020-12-06 12:30:19 INFO  ContextCleaner:54 - Cleaned accumulator 10
+2020-12-06 12:30:19 INFO  ContextCleaner:54 - Cleaned accumulator 23
+2020-12-06 12:30:19 INFO  ContextCleaner:54 - Cleaned accumulator 2
+2020-12-06 12:30:19 INFO  ContextCleaner:54 - Cleaned accumulator 6
+2020-12-06 12:30:19 INFO  ContextCleaner:54 - Cleaned accumulator 12
+2020-12-06 12:30:19 INFO  ContextCleaner:54 - Cleaned accumulator 24
+2020-12-06 12:30:19 INFO  ContextCleaner:54 - Cleaned accumulator 18
+2020-12-06 12:30:19 INFO  ContextCleaner:54 - Cleaned accumulator 1
+2020-12-06 12:30:19 INFO  ContextCleaner:54 - Cleaned accumulator 21
+2020-12-06 12:30:19 INFO  ContextCleaner:54 - Cleaned accumulator 3
+2020-12-06 12:30:19 INFO  ContextCleaner:54 - Cleaned accumulator 11
+2020-12-06 12:30:19 INFO  ContextCleaner:54 - Cleaned accumulator 22
+2020-12-06 12:30:19 INFO  BlockManagerInfo:54 - Removed broadcast_1_piece0 on ubuntu1804-010.student.cs.uwaterloo.ca:39213 in memory (size: 4.9 KB, free: 366.3 MB)
+2020-12-06 12:30:19 INFO  ContextCleaner:54 - Cleaned accumulator 7
+2020-12-06 12:30:19 INFO  ContextCleaner:54 - Cleaned accumulator 8
+2020-12-06 12:30:19 INFO  ContextCleaner:54 - Cleaned accumulator 16
+2020-12-06 12:30:19 INFO  ContextCleaner:54 - Cleaned accumulator 20
+2020-12-06 12:30:19 INFO  ContextCleaner:54 - Cleaned accumulator 5
+2020-12-06 12:30:19 INFO  ContextCleaner:54 - Cleaned accumulator 25
+2020-12-06 12:30:19 INFO  ContextCleaner:54 - Cleaned accumulator 4
+2020-12-06 12:30:19 INFO  ContextCleaner:54 - Cleaned accumulator 9
+2020-12-06 12:30:19 INFO  ContextCleaner:54 - Cleaned accumulator 13
+2020-12-06 12:30:19 INFO  ContextCleaner:54 - Cleaned accumulator 15
+2020-12-06 12:30:19 INFO  BlockManagerInfo:54 - Removed broadcast_0_piece0 on ubuntu1804-010.student.cs.uwaterloo.ca:39213 in memory (size: 23.5 KB, free: 366.3 MB)
+2020-12-06 12:30:19 INFO  ContextCleaner:54 - Cleaned accumulator 19
+2020-12-06 12:30:19 INFO  ContextCleaner:54 - Cleaned accumulator 17
+2020-12-06 12:30:19 INFO  ContextCleaner:54 - Cleaned accumulator 14
+2020-12-06 12:30:21 INFO  FileSourceStrategy:54 - Pruning directories with: 
+2020-12-06 12:30:21 INFO  FileSourceStrategy:54 - Post-Scan Filters: AtLeastNNulls(n, text#9)
+2020-12-06 12:30:21 INFO  FileSourceStrategy:54 - Output Data Schema: struct<text: string>
+2020-12-06 12:30:21 INFO  FileSourceScanExec:54 - Pushed Filters: 
+2020-12-06 12:30:21 INFO  CodeGenerator:54 - Code generated in 172.144312 ms
+2020-12-06 12:30:21 INFO  MemoryStore:54 - Block broadcast_2 stored as values in memory (estimated size 278.1 KB, free 366.0 MB)
+2020-12-06 12:30:21 INFO  MemoryStore:54 - Block broadcast_2_piece0 stored as bytes in memory (estimated size 23.5 KB, free 366.0 MB)
+2020-12-06 12:30:21 INFO  BlockManagerInfo:54 - Added broadcast_2_piece0 in memory on ubuntu1804-010.student.cs.uwaterloo.ca:39213 (size: 23.5 KB, free: 366.3 MB)
+2020-12-06 12:30:21 INFO  SparkContext:54 - Created broadcast 2 from javaToPython at NativeMethodAccessorImpl.java:0
+2020-12-06 12:30:21 INFO  FileSourceScanExec:54 - Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+2020-12-06 12:30:21 INFO  SparkContext:54 - Starting job: takeOrdered at /u1/z648li/cs451/nlp-covid19/wordcount.py:26
+2020-12-06 12:30:21 INFO  DAGScheduler:54 - Registering RDD 9 (reduceByKey at /u1/z648li/cs451/nlp-covid19/wordcount.py:26)
+2020-12-06 12:30:21 INFO  DAGScheduler:54 - Got job 1 (takeOrdered at /u1/z648li/cs451/nlp-covid19/wordcount.py:26) with 1 output partitions
+2020-12-06 12:30:21 INFO  DAGScheduler:54 - Final stage: ResultStage 2 (takeOrdered at /u1/z648li/cs451/nlp-covid19/wordcount.py:26)
+2020-12-06 12:30:21 INFO  DAGScheduler:54 - Parents of final stage: List(ShuffleMapStage 1)
+2020-12-06 12:30:21 INFO  DAGScheduler:54 - Missing parents: List(ShuffleMapStage 1)
+2020-12-06 12:30:21 INFO  DAGScheduler:54 - Submitting ShuffleMapStage 1 (PairwiseRDD[9] at reduceByKey at /u1/z648li/cs451/nlp-covid19/wordcount.py:26), which has no missing parents
+2020-12-06 12:30:21 INFO  MemoryStore:54 - Block broadcast_3 stored as values in memory (estimated size 22.5 KB, free 366.0 MB)
+2020-12-06 12:30:21 INFO  MemoryStore:54 - Block broadcast_3_piece0 stored as bytes in memory (estimated size 13.8 KB, free 366.0 MB)
+2020-12-06 12:30:21 INFO  BlockManagerInfo:54 - Added broadcast_3_piece0 in memory on ubuntu1804-010.student.cs.uwaterloo.ca:39213 (size: 13.8 KB, free: 366.3 MB)
+2020-12-06 12:30:21 INFO  SparkContext:54 - Created broadcast 3 from broadcast at DAGScheduler.scala:1039
+2020-12-06 12:30:21 INFO  DAGScheduler:54 - Submitting 1 missing tasks from ShuffleMapStage 1 (PairwiseRDD[9] at reduceByKey at /u1/z648li/cs451/nlp-covid19/wordcount.py:26) (first 15 tasks are for partitions Vector(0))
+2020-12-06 12:30:21 INFO  TaskSchedulerImpl:54 - Adding task set 1.0 with 1 tasks
+2020-12-06 12:30:21 INFO  TaskSetManager:54 - Starting task 0.0 in stage 1.0 (TID 1, localhost, executor driver, partition 0, PROCESS_LOCAL, 8308 bytes)
+2020-12-06 12:30:21 INFO  Executor:54 - Running task 0.0 in stage 1.0 (TID 1)
+2020-12-06 12:30:21 INFO  FileScanRDD:54 - Reading File path: file:///u1/z648li/cs451/nlp-covid19/covid19_tweets.csv, range: 0-68713814, partition values: [empty row]
+2020-12-06 12:30:21 INFO  CodeGenerator:54 - Code generated in 15.6804 ms
+2020-12-06 12:30:36 INFO  PythonRunner:54 - Times: total = 15117, boot = 257, init = 78, finish = 14782
+2020-12-06 12:30:36 INFO  Executor:54 - Finished task 0.0 in stage 1.0 (TID 1). 2038 bytes result sent to driver
+2020-12-06 12:30:36 INFO  TaskSetManager:54 - Finished task 0.0 in stage 1.0 (TID 1) in 15201 ms on localhost (executor driver) (1/1)
+2020-12-06 12:30:36 INFO  TaskSchedulerImpl:54 - Removed TaskSet 1.0, whose tasks have all completed, from pool 
+2020-12-06 12:30:36 INFO  DAGScheduler:54 - ShuffleMapStage 1 (reduceByKey at /u1/z648li/cs451/nlp-covid19/wordcount.py:26) finished in 15.232 s
+2020-12-06 12:30:36 INFO  DAGScheduler:54 - looking for newly runnable stages
+2020-12-06 12:30:36 INFO  DAGScheduler:54 - running: Set()
+2020-12-06 12:30:36 INFO  DAGScheduler:54 - waiting: Set(ResultStage 2)
+2020-12-06 12:30:36 INFO  DAGScheduler:54 - failed: Set()
+2020-12-06 12:30:36 INFO  DAGScheduler:54 - Submitting ResultStage 2 (PythonRDD[12] at takeOrdered at /u1/z648li/cs451/nlp-covid19/wordcount.py:26), which has no missing parents
+2020-12-06 12:30:36 INFO  MemoryStore:54 - Block broadcast_4 stored as values in memory (estimated size 7.7 KB, free 366.0 MB)
+2020-12-06 12:30:36 INFO  MemoryStore:54 - Block broadcast_4_piece0 stored as bytes in memory (estimated size 4.8 KB, free 366.0 MB)
+2020-12-06 12:30:36 INFO  BlockManagerInfo:54 - Added broadcast_4_piece0 in memory on ubuntu1804-010.student.cs.uwaterloo.ca:39213 (size: 4.8 KB, free: 366.3 MB)
+2020-12-06 12:30:36 INFO  SparkContext:54 - Created broadcast 4 from broadcast at DAGScheduler.scala:1039
+2020-12-06 12:30:36 INFO  DAGScheduler:54 - Submitting 1 missing tasks from ResultStage 2 (PythonRDD[12] at takeOrdered at /u1/z648li/cs451/nlp-covid19/wordcount.py:26) (first 15 tasks are for partitions Vector(0))
+2020-12-06 12:30:36 INFO  TaskSchedulerImpl:54 - Adding task set 2.0 with 1 tasks
+2020-12-06 12:30:36 INFO  TaskSetManager:54 - Starting task 0.0 in stage 2.0 (TID 2, localhost, executor driver, partition 0, ANY, 7649 bytes)
+2020-12-06 12:30:36 INFO  Executor:54 - Running task 0.0 in stage 2.0 (TID 2)
+2020-12-06 12:30:36 INFO  ShuffleBlockFetcherIterator:54 - Getting 1 non-empty blocks out of 1 blocks
+2020-12-06 12:30:36 INFO  ShuffleBlockFetcherIterator:54 - Started 0 remote fetches in 3 ms
+2020-12-06 12:30:37 INFO  PythonRunner:54 - Times: total = 652, boot = -86, init = 116, finish = 622
+2020-12-06 12:30:37 INFO  Executor:54 - Finished task 0.0 in stage 2.0 (TID 2). 40840 bytes result sent to driver
+2020-12-06 12:30:37 INFO  TaskSetManager:54 - Finished task 0.0 in stage 2.0 (TID 2) in 685 ms on localhost (executor driver) (1/1)
+2020-12-06 12:30:37 INFO  TaskSchedulerImpl:54 - Removed TaskSet 2.0, whose tasks have all completed, from pool 
+2020-12-06 12:30:37 INFO  DAGScheduler:54 - ResultStage 2 (takeOrdered at /u1/z648li/cs451/nlp-covid19/wordcount.py:26) finished in 0.703 s
+2020-12-06 12:30:37 INFO  DAGScheduler:54 - Job 1 finished: takeOrdered at /u1/z648li/cs451/nlp-covid19/wordcount.py:26, took 15.965176 s
 (93785, u'covid19')
 (18105, u'cases')
 (14555, u'new')
@@ -1173,16 +1174,1016 @@
 (268, u'struggling')
 (268, u'frontline')
 (268, u'fun')
-2020-12-05 19:47:37 INFO  SparkContext:54 - Invoking stop() from shutdown hook
-2020-12-05 19:47:37 INFO  AbstractConnector:318 - Stopped Spark@71107b8d{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
-2020-12-05 19:47:37 INFO  SparkUI:54 - Stopped Spark web UI at http://ubuntu1804-002.student.cs.uwaterloo.ca:4040
-2020-12-05 19:47:37 INFO  MapOutputTrackerMasterEndpoint:54 - MapOutputTrackerMasterEndpoint stopped!
-2020-12-05 19:47:37 INFO  MemoryStore:54 - MemoryStore cleared
-2020-12-05 19:47:37 INFO  BlockManager:54 - BlockManager stopped
-2020-12-05 19:47:37 INFO  BlockManagerMaster:54 - BlockManagerMaster stopped
-2020-12-05 19:47:37 INFO  OutputCommitCoordinator$OutputCommitCoordinatorEndpoint:54 - OutputCommitCoordinator stopped!
-2020-12-05 19:47:37 INFO  SparkContext:54 - Successfully stopped SparkContext
-2020-12-05 19:47:37 INFO  ShutdownHookManager:54 - Shutdown hook called
-2020-12-05 19:47:37 INFO  ShutdownHookManager:54 - Deleting directory /tmp/spark-ae7d8c56-bf7a-40cc-a84a-eea30ee8fc17/pyspark-23858923-cd68-4145-a467-00169e6551d1
-2020-12-05 19:47:37 INFO  ShutdownHookManager:54 - Deleting directory /tmp/spark-ae7d8c56-bf7a-40cc-a84a-eea30ee8fc17
-2020-12-05 19:47:37 INFO  ShutdownHookManager:54 - Deleting directory /tmp/spark-90799468-e282-42b3-a6e3-bebff541eb79
+(268, u'expected')
+(267, u'auspol')
+(267, u'published')
+(266, u'hot')
+(266, u'events')
+(266, u'sarscov2')
+(266, u'quick')
+(265, u'amitshah')
+(265, u'known')
+(265, u'moment')
+(265, u'thoughts')
+(264, u'lessons')
+(264, u'covering')
+(263, u'threat')
+(263, u'london')
+(263, u'release')
+(263, u'aid')
+(262, u'prevention')
+(262, u'towards')
+(262, u'beyond')
+(262, u'guide')
+(261, u'fund')
+(261, u'cdcgov')
+(261, u'happened')
+(261, u'folks')
+(261, u"world's")
+(261, u'tourism')
+(260, u'sorry')
+(260, u'welcome')
+(259, u'request')
+(259, u'bit')
+(259, u'benefits')
+(259, u'mortality')
+(259, u'gonna')
+(258, u'levels')
+(258, u'phone')
+(257, u'risks')
+(257, u'adults')
+(257, u'stayhome')
+(257, u'victims')
+(256, u'returning')
+(256, u'facts')
+(256, u'recession')
+(256, u'reading')
+(256, u'stories')
+(255, u'art')
+(254, u'growing')
+(254, u'restaurants')
+(254, u'analysis')
+(253, u'near')
+(252, u'expect')
+(252, u'edt')
+(252, u'cut')
+(252, u'steps')
+(252, u'significant')
+(252, u'providing')
+(251, u'studies')
+(251, u'helps')
+(251, u'discussion')
+(250, u'words')
+(250, u'fucking')
+(250, u'court')
+(249, u'town')
+(249, u'problems')
+(249, u'exposed')
+(249, u'marketing')
+(248, u'middle')
+(248, u'senate')
+(248, u'shop')
+(248, u'beat')
+(248, u'largest')
+(247, u'abo')
+(247, u'senatemajldr')
+(247, u'sars-cov-2')
+(247, u'race')
+(247, u'term')
+(247, u'fatalities')
+(247, u'johnson')
+(246, u'maskup')
+(246, u'nyc')
+(246, u'safely')
+(246, u'however')
+(245, u'protecting')
+(245, u'west')
+(245, u'april')
+(245, u'admitted')
+(245, u'prime')
+(245, u'solution')
+(245, u'lab')
+(244, u'june')
+(244, u'shopping')
+(244, u'aged')
+(244, u'explain')
+(244, u'italy')
+(243, u"realdonaldtrump's")
+(243, u'decided')
+(243, u'positivity')
+(243, u'drop')
+(243, u'moving')
+(242, u'required')
+(242, u'viral')
+(242, u'stage')
+(242, u'combat')
+(241, u'groups')
+(241, u'maintain')
+(241, u'pretty')
+(241, u'icu')
+(240, u'telling')
+(240, u'received')
+(240, u'store')
+(240, u'figures')
+(239, u'approach')
+(239, u'name')
+(239, u'senior')
+(238, u'worry')
+(238, u'beginning')
+(238, u'push')
+(238, u'lowest')
+(237, u'launched')
+(237, u'men')
+(237, u'exactly')
+(236, u'newzealand')
+(236, u'added')
+(236, u'disaster')
+(236, u'hell')
+(236, u'absolutely')
+(236, u'weekly')
+(236, u'reached')
+(236, u'success')
+(236, u'register')
+(236, u'tot')
+(235, u'he\u2019s')
+(235, u'lose')
+(235, u'sales')
+(235, u'trends')
+(235, u'what\u2019s')
+(234, u'teams')
+(234, u'rather')
+(234, u'lockdowns')
+(233, u'outbreaks')
+(233, u'prepare')
+(233, u'knew')
+(233, u'fast')
+(233, u'period')
+(233, u'region')
+(232, u'enjoy')
+(232, u'anxiety')
+(232, u'asymptomatic')
+(232, u'central')
+(232, u'model')
+(231, u'eat')
+(231, u'approved')
+(231, u'develop')
+(231, u'build')
+(231, u'speaking')
+(230, u'speak')
+(230, u'tax')
+(230, u'chart')
+(229, u'pray')
+(229, u'philippines')
+(229, u'staying')
+(229, u'final')
+(229, u'session')
+(229, u'sent')
+(229, u'concerned')
+(228, u'internet')
+(228, u'terrible')
+(228, u'era')
+(228, u'lower')
+(228, u'paid')
+(228, u'warns')
+(228, u'damn')
+(228, u'gives')
+(228, u'mentalhealth')
+(227, u'lord')
+(227, u'progress')
+(226, u'inside')
+(226, u'car')
+(226, u'solutions')
+(226, u'fully')
+(225, u'200')
+(225, u'knows')
+(225, u'false')
+(225, u'energy')
+(225, u'manage')
+(225, u'counted')
+(224, u'maga')
+(224, u'african')
+(224, u'delivery')
+(224, u'road')
+(223, u'linked')
+(223, u'pmoindia')
+(223, u'stats')
+(223, u'we\u2019ve')
+(223, u'drive')
+(223, u'individuals')
+(222, u'shared')
+(222, u'self')
+(222, u'survive')
+(222, u'freedom')
+(222, u'flights')
+(221, u'super')
+(221, u'exams')
+(221, u'add')
+(220, u'vietnam')
+(220, u'happens')
+(220, u'housing')
+(219, u'managing')
+(219, u'awareness')
+(219, u'rural')
+(219, u'ongoing')
+(219, u'petition')
+(219, u'covid__19')
+(218, u'1,000')
+(218, u'opinion')
+(218, u'mumbai')
+(218, u'facility')
+(218, u'holiday')
+(217, u'world\u2019s')
+(217, u'modi')
+(217, u'conversation')
+(217, u'turn')
+(216, u'indiafightscorona')
+(216, u'extended')
+(216, u'detected')
+(216, u'tough')
+(216, u'infectious')
+(216, u'example')
+(216, u'warning')
+(215, u'fatality')
+(215, u'fine')
+(215, u'workplace')
+(215, u'contain')
+(215, u'speakerpelosi')
+(215, u'hate')
+(215, u'bank')
+(214, u'violence')
+(214, u'ill')
+(214, u'elderly')
+(214, u'missed')
+(213, u'gave')
+(213, u'smart')
+(213, u'vital')
+(213, u'600')
+(212, u'account')
+(212, u'trend')
+(212, u'word')
+(212, u'often')
+(212, u'trade')
+(212, u'innovation')
+(212, u'nygovcuomo')
+(211, u'politicians')
+(211, u'2021')
+(210, u'completely')
+(210, u'space')
+(210, u'etc')
+(210, u'globally')
+(210, u'later')
+(210, u'perfect')
+(209, u'japan')
+(209, u'either')
+(209, u'hundreds')
+(209, u'conspiracy')
+(208, u'busy')
+(208, u'stands')
+(208, u'quality')
+(208, u'customer')
+(208, u'majority')
+(208, u'earlyvoting')
+(207, u'hearing')
+(207, u'worried')
+(207, u'beautiful')
+(206, u'note')
+(206, u'signs')
+(206, u'arizona')
+(206, u'finds')
+(206, u'mother')
+(205, u'package')
+(205, u'income')
+(205, u'nobody')
+(205, u'launch')
+(205, u'earlier')
+(204, u'seem')
+(204, u'couple')
+(204, u'professor')
+(204, u'wuhan')
+(204, u'extra')
+(203, u'persons')
+(203, u'orders')
+(203, u'minutes')
+(203, u'becomes')
+(203, u'site')
+(203, u'difference')
+(203, u'mayor')
+(203, u'park')
+(203, u'officer')
+(202, u'e.g')
+(202, u'claim')
+(202, u'medicine')
+(202, u'pushing')
+(202, u'organizations')
+(202, u'dealing')
+(201, u'volunteers')
+(201, u'long-term')
+(201, u'shown')
+(201, u'partners')
+(201, u'challenging')
+(201, u'wednesday')
+(201, u'australian')
+(201, u'losing')
+(201, u'ontario')
+(201, u'definitely')
+(200, u'melbourne')
+(200, u'process')
+(200, u'2019')
+(200, u'concern')
+(200, u'crossed')
+(200, u'auckland')
+(200, u'beach')
+(199, u'price')
+(199, u'scientific')
+(199, u'conditions')
+(199, u'dont')
+(199, u'covid19india')
+(198, u'lots')
+(198, u'fda')
+(198, u'joke')
+(197, u'passengers')
+(197, u'misinformation')
+(197, u'affect')
+(197, u'lie')
+(197, u'crazy')
+(197, u'corruption')
+(196, u'changing')
+(196, u'mobile')
+(196, u'they\u2019re')
+(196, u'remains')
+(196, u'receive')
+(196, u'choose')
+(196, u'retail')
+(195, u'rally')
+(195, u'singh')
+(195, u'tells')
+(195, u'radio')
+(195, u'quickly')
+(195, u'precautions')
+(195, u'quite')
+(194, u'necessary')
+(194, u'republican')
+(194, u'design')
+(194, u'excess')
+(194, u'street')
+(194, u'camp')
+(194, u'voting')
+(193, u'hour')
+(193, u'boris')
+(193, u'hong')
+(193, u'decisions')
+(193, u'indigenous')
+(193, u'discusses')
+(193, u'girls')
+(193, u'blm')
+(193, u'excited')
+(193, u'3rd')
+(193, u'illness')
+(193, u'capacity')
+(192, u'turned')
+(192, u'assam')
+(192, u'provides')
+(192, u'featured')
+(192, u'israel')
+(192, u'helped')
+(192, u'board')
+(191, u'aren\u2019t')
+(191, u'streets')
+(191, u'offers')
+(191, u'partner')
+(190, u'spending')
+(190, u'flight')
+(190, u'successful')
+(190, u'products')
+(190, u'mild')
+(190, u'trump\u2019s')
+(189, u'cancelled')
+(189, u'bjp')
+(189, u'ban')
+(189, u'spend')
+(189, u'nurse')
+(189, u'robert')
+(188, u'diseases')
+(188, u'wanted')
+(188, u'baby')
+(188, u'epidemic')
+(187, u'kenya')
+(187, u'insights')
+(187, u'mexico')
+(186, u'executive')
+(186, u'ohio')
+(186, u'stimulus')
+(186, u'funny')
+(186, u'responsibility')
+(185, u'today\u2019s')
+(185, u'restaurant')
+(185, u'letter')
+(185, u'greater')
+(185, u'exposure')
+(185, u'scams')
+(185, u'bulletin')
+(185, u'photography')
+(185, u'india\u2019s')
+(185, u'donate')
+(185, u'teacher')
+(185, u'markets')
+(185, u'wife')
+(185, u'cold')
+(184, u'funds')
+(184, u'crucial')
+(184, u'celebrate')
+(184, u'capital')
+(184, u'actions')
+(183, u'obesity')
+(183, u'british')
+(183, u'photo')
+(183, u'learned')
+(183, u'apply')
+(183, u'effort')
+(183, u'older')
+(183, u'plandemic')
+(182, u'sanitizer')
+(182, u'began')
+(182, u'improve')
+(181, u'provided')
+(181, u'domestic')
+(181, u'wondering')
+(181, u'respond')
+(181, u'nytimes')
+(181, u'sweden')
+(181, u'drtedros')
+(181, u'operations')
+(181, u'100,000')
+(181, u'clearly')
+(180, u'room')
+(180, u'cash')
+(180, u'spent')
+(180, u'worked')
+(180, u'value')
+(180, u'climate')
+(180, u'hospitalizations')
+(180, u'understanding')
+(180, u'mess')
+(180, u'glad')
+(180, u'shops')
+(180, u'offering')
+(180, u'cruise')
+(180, u'fans')
+(179, u'uganda')
+(179, u'worker')
+(179, u'trending')
+(179, u'although')
+(179, u'eod')
+(179, u'investment')
+(179, u'nov-3')
+(179, u'boost')
+(178, u'respect')
+(178, u'yeah')
+(178, u'curve')
+(178, u'developing')
+(177, u'nose')
+(177, u'hospitalized')
+(177, u'listening')
+(177, u'brexit')
+(177, u'legal')
+(177, u'aka')
+(177, u'explains')
+(176, u'hongkong')
+(176, u'kong')
+(176, u'universities')
+(176, u'foreign')
+(176, u'urgent')
+(176, u'500')
+(176, u'games')
+(176, u'main')
+(176, u'son')
+(176, u'basic')
+(176, u'truly')
+(175, u'activities')
+(175, u'present')
+(175, u'opportunities')
+(175, u'round')
+(175, u'plus')
+(175, u'hygiene')
+(175, u'bars')
+(175, u'choice')
+(175, u'father')
+(175, u'fair')
+(175, u'demands')
+(175, u'organization')
+(174, u'song')
+(174, u'hello')
+(174, u'centres')
+(174, u'posted')
+(174, u'professional')
+(173, u'finance')
+(173, u'reveals')
+(173, u'colleagues')
+(173, u'prayers')
+(173, u'gold')
+(173, u'begin')
+(172, u'production')
+(172, u'compared')
+(172, u'strategies')
+(172, u'blacklivesmatter')
+(172, u'begins')
+(172, u'straight')
+(172, u'stock')
+(171, u'damage')
+(171, u'everyday')
+(171, u'multiple')
+(171, u'edition')
+(171, u'briefing')
+(171, u'meanwhile')
+(171, u'assistance')
+(171, u'simply')
+(171, u'upon')
+(171, u'rich')
+(171, u'council')
+(170, u'employers')
+(170, u'causes')
+(170, u'colleges')
+(169, u'hcq')
+(169, u'priority')
+(169, u'percent')
+(169, u'panel')
+(169, u'beds')
+(169, u'lol')
+(169, u'oil')
+(168, u'costs')
+(168, u'perhaps')
+(168, u'green')
+(168, u'rent')
+(168, u'contract')
+(168, u'delivered')
+(167, u'chain')
+(167, u'unless')
+(167, u'november')
+(167, u'kerala')
+(167, u'gates')
+(167, u'1000')
+(167, u'form')
+(167, u'google')
+(166, u'regional')
+(166, u'actual')
+(166, u'overall')
+(166, u'unprecedented')
+(166, u'discussing')
+(166, u'throughout')
+(165, u'tired')
+(165, u'thinks')
+(165, u'thehill')
+(165, u'various')
+(165, u'bbcnews')
+(165, u'highlights')
+(165, u'southafrica')
+(165, u'authorize')
+(165, u'bet')
+(165, u'seven')
+(165, u'province')
+(165, u'fellow')
+(164, u'interested')
+(164, u'sees')
+(164, u'prepared')
+(164, u'followed')
+(164, u'bbnaija')
+(164, u'civil')
+(164, u'prof')
+(163, u'p.m')
+(163, u'amidst')
+(163, u'spoke')
+(163, u'finding')
+(163, u'joined')
+(163, u'peak')
+(162, u'meat')
+(162, u'teaching')
+(162, u'stopped')
+(162, u'reasons')
+(162, u'deep')
+(161, u'raise')
+(161, u'sites')
+(161, u'resilience')
+(161, u'govrondesantis')
+(161, u'tha')
+(160, u'cas')
+(160, u'suspected')
+(160, u'apparently')
+(160, u'kills')
+(160, u'east')
+(160, u'coverings')
+(160, u'secretary')
+(160, u'golf')
+(159, u'matters')
+(159, u'limited')
+(159, u'publichealth')
+(159, u'usps')
+(159, u'antibody')
+(159, u'amazon')
+(159, u'herd')
+(159, u'includes')
+(159, u'trace')
+(159, u'totally')
+(159, u'walk')
+(159, u'committee')
+(159, u'starts')
+(159, u'personnel')
+(159, u'movie')
+(158, u'alcohol')
+(158, u'peace')
+(158, u'policies')
+(158, u'consequences')
+(158, u'john')
+(158, u'natural')
+(157, u'lying')
+(157, u'nationwide')
+(157, u'powerful')
+(157, u'association')
+(157, u'drugs')
+(157, u'keeps')
+(157, u'touch')
+(157, u'cough')
+(157, u'airport')
+(157, u'hrs')
+(157, u'explore')
+(157, u'communication')
+(157, u'activity')
+(156, u'matthancock')
+(156, u'nations')
+(156, u'tried')
+(156, u'mouth')
+(156, u'professionals')
+(156, u'treating')
+(156, u'humanity')
+(156, u'asia')
+(156, u'nfl')
+(156, u'regular')
+(156, u'reduced')
+(156, u'resume')
+(155, u'tamilnadu')
+(155, u'tune')
+(155, u'coverage')
+(155, u'everywhere')
+(155, u'poverty')
+(155, u'grant')
+(155, u'bus')
+(155, u'points')
+(155, u'paying')
+(155, u'foxnews')
+(155, u'employee')
+(154, u'statement')
+(154, u'okay')
+(154, u'earth')
+(154, u'districts')
+(154, u'officially')
+(154, u'antibodies')
+(154, u'bbc')
+(154, u'malaysia')
+(154, u'singapore')
+(154, u'shift')
+(154, u'network')
+(153, u'suggests')
+(153, u'shutdown')
+(153, u'environment')
+(153, u'benefit')
+(153, u'movement')
+(153, u'tracking')
+(153, u'played')
+(153, u'fraud')
+(153, u'tool')
+(153, u'notice')
+(153, u'transport')
+(153, u'require')
+(153, u'shah')
+(153, u'condition')
+(153, u'2019ncov')
+(152, u'station')
+(152, u'platform')
+(152, u'racism')
+(152, u'artist')
+(152, u'highly')
+(152, u'issued')
+(152, u'knowledge')
+(152, u'mandate')
+(152, u'telehealth')
+(152, u'exam')
+(152, u'cool')
+(152, u'situations')
+(151, u'fit')
+(151, u'figure')
+(151, u'lakhs')
+(151, u'gatherings')
+(151, u'mom')
+(151, u'pro')
+(151, u'imported')
+(151, u'focused')
+(151, u'affecting')
+(151, u'storm')
+(150, u'wishing')
+(150, u'tweets')
+(150, u'supposed')
+(150, u'brand')
+(150, u'caught')
+(150, u'military')
+(150, u'sleep')
+(150, u'aware')
+(149, u'literally')
+(149, u'wef')
+(149, u'host')
+(149, u'viruses')
+(149, u'banks')
+(149, u'scared')
+(149, u'feels')
+(149, u'owners')
+(148, u'feet')
+(148, u'toronto')
+(148, u'arrested')
+(148, u'fee')
+(148, u'mention')
+(148, u'immediately')
+(148, u'wonderful')
+(148, u'canadian')
+(148, u'institute')
+(148, u'speedy')
+(148, u'missing')
+(148, u'charge')
+(148, u'washing')
+(147, u'shame')
+(147, u'pop')
+(147, u'serve')
+(147, u'semester')
+(147, u'san')
+(147, u'culture')
+(147, u'task')
+(147, u"i'll")
+(147, u'wellbeing')
+(147, u'chennai')
+(147, u'reaches')
+(147, u'debt')
+(147, u'sadly')
+(146, u'campus')
+(146, u'kamalaharris')
+(146, u'birthday')
+(146, u'supplies')
+(146, u'programs')
+(146, u'congratulations')
+(146, u'grow')
+(146, u'brain')
+(146, u'madhya')
+(146, u'prices')
+(146, u'european')
+(146, u'spanish')
+(146, u'you\u2019ve')
+(146, u'dog')
+(145, u'quarter')
+(145, u'con')
+(145, u'wearadamnmask')
+(145, u'thousand')
+(145, u'credit')
+(145, u'cybersecurity')
+(145, u'hits')
+(144, u'providers')
+(144, u'dedicated')
+(144, u'respiratory')
+(144, u'protective')
+(144, u'initiative')
+(144, u'ignore')
+(144, u'humans')
+(144, u'indonesia')
+(144, u'spot')
+(144, u'creating')
+(144, u'uncertainty')
+(144, u'attack')
+(144, u'refuse')
+(144, u'proper')
+(144, u'ideas')
+(144, u'increases')
+(143, u'continued')
+(143, u'appreciate')
+(143, u'direct')
+(143, u'counties')
+(143, u'artists')
+(143, u'hours.\n\nthe')
+(143, u'previous')
+(143, u'consumer')
+(143, u'postponed')
+(143, u'confirms')
+(143, u'becoming')
+(143, u'decline')
+(143, u'afraid')
+(143, u'climatechange')
+(143, u'milestone')
+(142, u'drrpnishank')
+(142, u'300')
+(142, u'apart')
+(142, u'unique')
+(142, u'vladimir')
+(142, u'picture')
+(142, u'justice')
+(142, u'perspective')
+(142, u'experiencing')
+(142, u'exercise')
+(142, u'lets')
+(142, u'handle')
+(141, u'extend')
+(141, u'revealed')
+(141, u'washington')
+(141, u'mail')
+(141, u'adapt')
+(141, u'amit')
+(141, u'eyes')
+(141, u'shot')
+(141, u'except')
+(141, u'extremely')
+(141, u'became')
+(141, u'prison')
+(141, u"china's")
+(141, u'double')
+(141, u'cluster')
+(140, u'employment')
+(140, u'pressure')
+(140, u'kashmir')
+(140, u'delay')
+(140, u'map')
+(140, u'eating')
+(140, u'scotland')
+(140, u'holding')
+(139, u'pharma')
+(139, u'contracted')
+(139, u'in-person')
+(139, u'brings')
+(139, u'corporate')
+(139, u'faster')
+(139, u'wit')
+(139, u'blue')
+(138, u'signed')
+(138, u'color')
+(138, u'train')
+(138, u'announce')
+(138, u'continuing')
+(138, u'pandemics')
+(138, u'temple')
+(138, u'realize')
+(138, u'protocols')
+(138, u'cares')
+(137, u'asks')
+(137, u'cumulative')
+(137, u'whatever')
+(137, u'practices')
+(137, u'fewer')
+(137, u'attend')
+(137, u'lebanon')
+(137, u'thi')
+(137, u'gdp')
+(137, u'useful')
+(136, u'considering')
+(136, u'wedding')
+(136, u'dogs')
+(136, u'ass')
+(136, u'film')
+(136, u'experiences')
+(136, u'correct')
+(136, u'commission')
+(136, u'poll')
+(136, u'cleaning')
+(136, u'nba')
+(135, u'appears')
+(135, u'labs')
+(135, u'baseball')
+(135, u'raising')
+(135, u'awesome')
+(135, u'particularly')
+(135, u'limit')
+(135, u'bed')
+(135, u'rep')
+(135, u'zoom')
+(135, u'channel')
+(135, u'bihar')
+(134, u'opened')
+(134, u'dropped')
+(134, u'cancel')
+(134, u'allowing')
+(134, u'racist')
+(134, u'instagram')
+(134, u'tools')
+(134, u'fantastic')
+(134, u'german')
+(134, u'diagnosed')
+(134, u'designed')
+(134, u'y\u2019all')
+(134, u'resource')
+(134, u'western')
+(134, u'170,000')
+(134, u'ccp')
+(133, u'protesters')
+(133, u'parts')
+(133, u'broke')
+(133, u'pre')
+(133, u"government's")
+(133, u'urge')
+(133, u'club')
+(133, u'field')
+(133, u'fitness')
+(133, u'projects')
+(133, u'surprise')
+(132, u'elections')
+(132, u'primary')
+(132, u'duty')
+(132, u'tackle')
+(132, u'therapy')
+(132, u'eye')
+(132, u'accurate')
+(132, u'crore')
+(132, u'capita')
+(132, u'annual')
+(131, u'agenda')
+(131, u'smell')
+(131, u'nsw')
+(131, u'target')
+(131, u'none')
+(131, u'causing')
+(131, u'ram')
+(131, u'certain')
+(131, u'ground')
+(131, u'puts')
+(131, u'dashboard')
+(131, u'sounds')
+(131, u'unfortunately')
+(131, u'outdoor')
+(131, u'borders')
+(131, u'depression')
+(130, u'speaks')
+(130, u'lock')
+(130, u'construction')
+(130, u'excuse')
+(130, u'dad')
+(130, u'traffic')
+(130, u'skynews')
+(130, u'hopkins')
+(130, u'felt')
+(130, u"we'll")
+(130, u'insight')
+(130, u'johns')
+(129, u'bless')
+(129, u'email')
+(129, u'leaving')
+(129, u'agency')
+(129, u'rule')
+(129, u'land')
+(129, u'gyms')
+(129, u'videos')
+(129, u'falling')
+(128, u'hair')
+(128, u'everybody')
+(128, u'indoor')
+(128, u'deserve')
+(128, u'summary')
+(128, u'7-day')
+(128, u'abc')
+(128, u'kits')
+(128, u'iran')
+(128, u'shri')
+(128, u'position')
+(128, u'berlin')
+(128, u'pcr')
+(128, u'curb')
+(128, u'backtoschool')
+(127, u'incompetent')
+(127, u'independent')
+(127, u'flying')
+(127, u'parties')
+(127, u"people's")
+(127, u'october')
+(127, u'ending')
+(127, u'coronavirusindia')
+(127, u'enter')
+(127, u'reuters')
+(127, u'conduct')
+(127, u'ncdcgov')
+(127, u'proven')
+(126, u'brilliant')
+(126, u'setting')
+(126, u'code')
+(126, u'island')
+(126, u'covidiot')
+(126, u'closer')
+(126, u'ghana')
+(126, u'08:00')
+(126, u'terms')
+(126, u'commercial')
+(126, u'sturgis')
+(126, u"who's")
+(126, u'disease/covid-19')
+(126, u'findings')
+2020-12-06 12:30:37 INFO  SparkContext:54 - Invoking stop() from shutdown hook
+2020-12-06 12:30:37 INFO  AbstractConnector:318 - Stopped Spark@2d141684{HTTP/1.1,[http/1.1]}{0.0.0.0:4041}
+2020-12-06 12:30:37 INFO  SparkUI:54 - Stopped Spark web UI at http://ubuntu1804-010.student.cs.uwaterloo.ca:4041
+2020-12-06 12:30:37 INFO  MapOutputTrackerMasterEndpoint:54 - MapOutputTrackerMasterEndpoint stopped!
+2020-12-06 12:30:37 INFO  MemoryStore:54 - MemoryStore cleared
+2020-12-06 12:30:37 INFO  BlockManager:54 - BlockManager stopped
+2020-12-06 12:30:37 INFO  BlockManagerMaster:54 - BlockManagerMaster stopped
+2020-12-06 12:30:37 INFO  OutputCommitCoordinator$OutputCommitCoordinatorEndpoint:54 - OutputCommitCoordinator stopped!
+2020-12-06 12:30:37 INFO  SparkContext:54 - Successfully stopped SparkContext
+2020-12-06 12:30:37 INFO  ShutdownHookManager:54 - Shutdown hook called
+2020-12-06 12:30:37 INFO  ShutdownHookManager:54 - Deleting directory /tmp/spark-fc9341bd-53be-4239-a53a-d86ec3ebde06
+2020-12-06 12:30:37 INFO  ShutdownHookManager:54 - Deleting directory /tmp/spark-aa2b5080-5c1d-44e5-9480-2469c87c3b53
+2020-12-06 12:30:37 INFO  ShutdownHookManager:54 - Deleting directory /tmp/spark-aa2b5080-5c1d-44e5-9480-2469c87c3b53/pyspark-ba0a7a4d-1512-4e62-a176-520b2dac70cd

@@ -7,7 +7,7 @@ import re
 
 stopwords_en = stopwords.words('english')
 
-N = 1000 # top N words
+N = 2000 # top N words
 
 def wordcount(row):
   text = row.__getitem__('text')
