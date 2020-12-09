@@ -1,6 +1,7 @@
 import pyspark
 from pyspark.sql import SparkSession
 
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import pickle
@@ -22,7 +23,7 @@ def process_row(features, row):
 
 def build_word_frequency_by_date(tweets, features):
   t = tweets.rdd.flatMap(partial(process_row, features)).reduceByKey(lambda l, r: l+r)
-  t = t.filter(lambda r: r[0] >= '20200301') # filter to when cases started rising
+  t = t.filter(lambda r: r[0] >= '20200301') # filter to Mar 1 when cases started rising
   return t
 
 # Linear regression model
@@ -46,6 +47,31 @@ def build_model(stream):
   # we can change which model to use here
   reg = LinearRegression().fit(x, y)
   yield reg
+
+# Model evaluators
+
+def produce_scatterplot(x, y, xlab, ylab, filename, line=False):
+  plt.clf()
+  plt.scatter(x, y)
+  if line:
+    t = [np.min(x), np.max(x)]
+    plt.plot(t, t, '--')
+  plt.xlabel(xlab)
+  plt.ylabel(ylab)
+  plt.savefig(filename)
+
+def produce_lineplot(y1, y2, lab1, lab2, filename):
+  plt.clf()
+  plt.plot(y1, '-', label=lab1)
+  plt.plot(y2, '-', label=lab2)
+  plt.legend()
+  plt.savefig(filename)
+
+def produce_hist(x, title, filename):
+  plt.clf()
+  plt.hist(x, rwidth=0.9)
+  plt.title(title)
+  plt.savefig(filename)
 
 if __name__ == '__main__':
   spark = SparkSession.builder.getOrCreate()
@@ -76,16 +102,12 @@ if __name__ == '__main__':
   # train test split by date then remove date from labels (not needed for our purposes)
   split = dates[int(len(dates) * 0.8)] # gets us an approximate 4:1 train:test split
   train_df = df.filter(lambda r: r[0] < split).map(lambda r: r[1])
-  test_df = df.filter(lambda r: r[0] >= split).map(lambda r: r[1])
+  test_df = df.filter(lambda r: r[0] >= split).sortByKey().map(lambda r: r[1])
   xtest = np.array(test_df.map(lambda r: r[0]).collect())
   ytest = np.array(test_df.map(lambda r: r[1]).collect())
 
   train_size = train_df.count()
   test_size = test_df.count()
-
-  # collect for analysis
-  ytrain = train_df.map(lambda r: r[1]).collect()
-  y_all = np.array([y for y in ytest] + ytrain)
 
   # fit models
   models = train_df.repartition(K).mapPartitions(build_model).collect()
@@ -94,9 +116,6 @@ if __name__ == '__main__':
   print('Train %d, test %d, %d percent split' % (train_size, test_size, 100 * train_size / (train_size + test_size)))
   bagging = np.array([model.predict(xtest) for model in models])
   ypred = np.mean(bagging, axis=0)
-  print('Bootstrap aggregation (bagging) results')
-  print('Test X:')
-  print(xtest)
   print('Predicted:')
   print(ypred)
   print('Actual:')
@@ -108,5 +127,12 @@ if __name__ == '__main__':
   print('Linear regression ensemble RMSE: %f' % np.sqrt(mean_squared_error(ypred, ytest)))
 
   # validation of general case
-  print('Average case numbers: %f', np.mean(y_all))
-  print('SD case numbers: %f', np.std(y_all))
+  print('Average case numbers: %f', np.mean(ytest))
+  print('SD case numbers: %f', np.std(ytest))
+
+  # Plot predicted next day cases against current day cases to check if we are actually doing anything useful
+  produce_scatterplot(xtest.take(indices=-1, axis=1), ypred,
+    xlab='Current day cases', ylab='Predicted next day cases', filename='lr_scatter.png')
+  produce_scatterplot(ytest, ypred, 'Actual', 'Predicted', filename='lr_pred.png', line=True)
+  produce_hist(ypred / ytest, 'Predicted to Actual Ratios', 'lr_ratio.png')
+  produce_lineplot(ytest, ypred, 'Actual', 'Predicted', 'lr_trend.png')
