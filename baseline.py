@@ -17,16 +17,20 @@ def produce_scatterplot(x, y, xlab, ylab, filename, line=False):
   plt.ylabel(ylab)
   plt.savefig(filename)
 
-def produce_lineplot(y1, y2, lab1, lab2, filename):
+def produce_lineplot(y1, y2, lab1, lab2, xlab, ylab, filename):
   plt.clf()
   plt.plot(y1, '-', label=lab1)
   plt.plot(y2, '-', label=lab2)
+  plt.xlabel(xlab)
+  plt.ylabel(ylab)
   plt.legend()
   plt.savefig(filename)
 
-def produce_hist(x, title, filename):
+def produce_hist(x, title, xlab, ylab, filename):
   plt.clf()
   plt.hist(x, rwidth=0.9)
+  plt.xlabel(xlab)
+  plt.ylabel(ylab)
   plt.title(title)
   plt.savefig(filename)
 
@@ -77,6 +81,6 @@ if __name__ == '__main__':
     xlab='Current day cases', ylab='Real next day cases', filename='ar1_scatter.png')
   produce_scatterplot(xtest.take(indices=-1, axis=1), ypred,
     xlab='Current day cases', ylab='Predicted next day cases', filename='ar1_corr.png')
-  produce_scatterplot(ytest, ypred, 'Actual', 'Predicted', filename='ar1_pred.png', line=True)
-  produce_hist(ypred / ytest, 'Predicted to Actual Ratios', 'ar1_ratio.png')
-  produce_lineplot(ytest, ypred, 'Actual', 'Predicted', 'ar1_trend.png')
+  produce_scatterplot(ytest, ypred, xlab='Actual day cases', ylab='Predicted day cases', filename='ar1_pred.png', line=True)
+  produce_hist(ypred / ytest, 'Predicted to Actual Ratios', xlab='Predicted to Actual case count ratio', ylab='Frequency', filename='ar1_ratio.png')
+  produce_lineplot(ytest, ypred, 'Actual', 'Predicted', xlab='Day', ylab='Number of Cases', filename='ar1_trend.png')
